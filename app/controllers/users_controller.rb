@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :require_user, except: %i[new create]
   before_action :find_current_user, only: %i[edit update]
 
-
+  
   def new
     @user = User.new
   end
@@ -19,11 +19,10 @@ class UsersController < ApplicationController
       flash[:alert] = 'Something went wrong'
       render new_users_path
     end
-
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(params[:id])
     @opinion = Opinion.new
     @opinions = @user.opinions.ordered_by_most_recent
   end
