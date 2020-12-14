@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_154705) do
   end
 
   create_table "opinions", force: :cascade do |t|
-    t.integer "autor_id", null: false
+    t.integer "author_id", null: false
     t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
