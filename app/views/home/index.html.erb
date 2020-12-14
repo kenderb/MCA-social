@@ -4,7 +4,9 @@
 <div class="card mb-5">
     <div class="card-body">
         <%= form_for(@opinion, url: opinion_path) do |f| %>
-            <%= f.text_field :text, autofocus: true, class: "form-control", placeholder: "Enter your opinion" %>
+          <p class="emoji-picker-container">
+              <%= f.text_area :text, class: 'form-control', data: { emojiable: true } %>
+          </p>
         <% end %>
     </div>
 </div>
