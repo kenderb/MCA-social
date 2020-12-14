@@ -1,18 +1,42 @@
 @import 'bootstrap/dist/css/bootstrap';
+$my-bg-primary:  #51A2E1;
+$my-bg-darker:  #213246;
+
 .my-bg-primary {
-  background-color: #51A2E1;
+  background-color: $my-bg-primary;
+}
+
+.my-bg-darker {
+  background-color: $my-bg-darker;
 }
 
 .main-app-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "side-bar-l navbar navbar"
+  "side-bar-l main side-bar-r";
+  grid-template-columns: 2fr 5fr 1.5fr;
+  grid-template-rows: 5rem auto;
+  
+
+  .top-navbar {
+
+    grid-area: navbar;
+  }
 
   .rigth-navbar {
-  
+    grid-area: side-bar-r;
   }
   
   .middle-content {
-  
+    grid-area: main;
+    
   }
+  
   .left-navbar {
+    
+    grid-area: side-bar-l;
   
   }
   

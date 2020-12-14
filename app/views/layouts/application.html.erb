@@ -10,14 +10,14 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   </head>
 
-  <body>
-    <div class="main-app-container">
+  <body class="main-app-container bg-light">
+    
       <%= render 'layouts/navbar' %>
-      <div class="middle-content">
+      <div class="middle-content m-4">
         <%= yield %>
       </div>
-      <%= render 'sidebar_left' %>
-      <%= render 'sidebar_rigth' %>
-    </div>
+      <%= render 'layouts/sidebar_left' %>
+      <%= render 'layouts/sidebar_rigth' %>
+    
   </body>
 </html>
