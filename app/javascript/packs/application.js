@@ -15,8 +15,4 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require jquery
-//= require turbolinks
-//= require rails_emoji_picker
-//= require_tree .
 import "bootstrap"

@@ -4,12 +4,13 @@ module LikesHelper
     if like
       link_to like_path(id: like.id, opinion_id: opinion.id), method: :delete do
         
-        render 'likes/heart_full'
+        render 'likes/heart_outline'
       end
     else
       link_to likes_path(opinion_id: opinion.id), method: :post do
-        render 'likes/heart_outline'
+        render 'likes/heart_full'
       end
+      
     end
   end
 end
