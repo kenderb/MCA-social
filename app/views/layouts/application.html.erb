@@ -11,7 +11,13 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <div class="main-app-container">
+      <%= render 'layouts/navbar' %>
+      <div class="middle-content">
+        <%= yield %>
+      </div>
+      <%= render 'sidebar_left' %>
+      <%= render 'sidebar_rigth' %>
+    </div>
   </body>
 </html>
