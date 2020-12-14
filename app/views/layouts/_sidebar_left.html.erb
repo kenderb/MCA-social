@@ -1,3 +1,7 @@
-<aside class="left-navbar my-bg-darker">
-
+<aside class="left-navbar my-bg-darker container">
+  <div class="aside-header row nav justify-content-end border-bottom border-dark pb-3">
+  
+    <%= image_tag current_user.photo.url, class: "img-fluid  col-6 | mx-auto  my-auto mr-xl-0", style: 'max-width:120px;'%>
+    <p class="col-6 text-secondary text-uppercase | mx-auto   my-auto ml-xl-0 | font-weight-bold" style="min-width: 150px;"><%= current_user.fullname %></p>
+  </div>
 </aside>
