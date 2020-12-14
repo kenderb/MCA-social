@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_14_043425) do
+ActiveRecord::Schema.define(version: 2020_12_14_154705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 2020_12_14_043425) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "fullname"
-    t.string "photo", default: "default_photo.png"
-    t.string "cover_image", default: "default_cover.jpg"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "photo_file_name"
@@ -53,6 +51,8 @@ ActiveRecord::Schema.define(version: 2020_12_14_043425) do
     t.string "cover_image_content_type"
     t.bigint "cover_image_file_size"
     t.datetime "cover_image_updated_at"
+    t.string "photo"
+    t.string "cover_image"
   end
 
   add_foreign_key "likes", "users"
