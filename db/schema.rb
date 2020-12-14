@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_234214) do
+ActiveRecord::Schema.define(version: 2020_12_14_043425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 2020_12_13_234214) do
     t.string "fullname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.bigint "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string "cover_image_file_name"
+    t.string "cover_image_content_type"
+    t.bigint "cover_image_file_size"
+    t.datetime "cover_image_updated_at"
   end
 
   add_foreign_key "likes", "users"
