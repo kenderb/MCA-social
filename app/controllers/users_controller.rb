@@ -1,13 +1,51 @@
 class UsersController < ApplicationController
-  def index
-    
+  before_action :require_user, except: %i[new create]
+  before_action :find_current_user, only: %i[edit update]
+
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    @user.username = @user.username.downcase
+
+    if @user.save
+      flash[:notice] = "Welcome #{@user.username}!"
+      session[:username] = @user.username
+      redirect_to root_path
+    else
+      flash[:alert] = 'Something went wrong'
+      render new_user_path
+    end
+
   end
 
   def show
-    
+    @user = User.find(params[:id])
+    @opinion = Opinion.new
+    @opinions = @user.opinions.ordered_by_most_recent
   end
-  def new
-    
+
+  def edit
   end
-  
+
+  def update
+    @user = current_user
+    @user.update(user_params)
+    flash[:notice] = 'User profile updated!'
+    redirect_to @user
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :fullname, :photo, :cover_image)
+  end
+
+  def find_current_user
+    @user = current_user
+  end
+
 end

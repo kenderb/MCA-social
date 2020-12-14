@@ -41,8 +41,6 @@ ActiveRecord::Schema.define(version: 2020_12_13_234214) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "fullname"
-    t.string "photo", default: "default_photo.png"
-    t.string "cover_image", default: "default_cover.jpg"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
