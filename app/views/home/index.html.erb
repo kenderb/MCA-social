@@ -1,9 +1,9 @@
 
 
 
-<div class="card mb-5">
+<div class="card mb-5 ">
     <div class="card-body h5">
-    <h3 class='text-muted'>Your Opinions for the movies</h3>
+    <h5 class='text-muted'>Your Opinions for the movies</h5>
         <%= form_for(@opinion, url: opinion_path) do |f| %>
             <%= f.text_field :text, autofocus: true, class: "form-control", placeholder: "Enter your opinion" %>
         <% end %>
@@ -12,7 +12,7 @@
 
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title border-bottom pb-3">Opinions</h5>
+        <h5 class="card-title border-bottom pb-3 text-primary"> <%= @opinions.count_opinion %> Movies opinions</h5>
         <%= render @opinions %>
     </div>
 </div>

@@ -5,4 +5,9 @@ class Opinion < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   scope :ordered_by_most_recent, -> { includes(:author, :likes).order(created_at: :desc) }
+
+  def self.count_opinion
+    ordered_by_most_recent.length
+  end
+  
 end

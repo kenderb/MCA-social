@@ -1,6 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 $my-bg-primary:  #51A2E1;
 $my-bg-darker:  #213246;
+$my-bg-ligth:  #F3F4F6;
 
 .my-bg-primary {
   background-color: $my-bg-primary;
@@ -9,6 +10,9 @@ $my-bg-darker:  #213246;
 .my-bg-darker {
   background-color: $my-bg-darker;
 }
+.my-bg-ligth {
+  background-color: $my-bg-ligth;
+}
 
 .main-app-container {
   height: 100vh;
@@ -16,7 +20,7 @@ $my-bg-darker:  #213246;
   grid-template-areas: 
   "side-bar-l navbar navbar"
   "side-bar-l main side-bar-r";
-  grid-template-columns: 2fr 5fr 1.5fr;
+  grid-template-columns: 1.5fr 5fr 1.5fr;
   grid-template-rows: 5rem auto;
   
 
