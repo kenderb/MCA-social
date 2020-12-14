@@ -12,12 +12,15 @@
 
   <body class="main-app-container my-bg-ligth">
     
-      <%= render 'layouts/navbar' %>
-      <div class="middle-content m-4">
-        <%= yield %>
-      </div>
-      <%= render 'layouts/sidebar_left' %>
-      <%= render 'layouts/sidebar_rigth' %>
-    
+      <% if current_user.present? %> 
+          <%= render 'layouts/navbar' %>  
+          <div class="middle-content m-4">
+            <%= yield %>
+          </div>
+          <%= render 'layouts/sidebar_left' %>
+          <%= render 'layouts/sidebar_rigth' %>
+      <% else %>
+          <%= render 'sessions/signin_form' %>
+      <% end %>
   </body>
 </html>
