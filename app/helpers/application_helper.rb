@@ -7,5 +7,13 @@ module ApplicationHelper
                 alt: user.username, class: 'pr-2 rounded-circle profile-img')
     end
   end
+
+  def validate_session
+    if current_user.present?
+      render 'layouts/main_app'
+    else
+      render 'layouts/form_sessions'
+    end
+  end
   
 end
