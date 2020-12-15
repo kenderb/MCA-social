@@ -3,6 +3,9 @@
 
     <% @not_following.each do |not_following| %>
     <div class="d-flex flex-row align-items-center mt-3 mb-4 who-to-follow">
+      <div>
+        <%= display_follow_btn(not_following, 'layouts/follow_icon') %>
+      </div>
       <div class="author">
       <%= display_photo_profile(not_following, :medium)  %>
       </div>

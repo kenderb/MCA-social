@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   post 'opinion', to: 'opinions#create'
+  post 'follow', to: 'followings#create'
   get 'users/:username', to: 'users#show', as: 'profile'
 
   post 'likes/:opinion_id', to: 'likes#create', as: 'likes'

@@ -7,9 +7,8 @@ module UserHelper
     out << link_to(obj.followers.first.fullname, profile_path(obj.followers.first.username))
     out.html_safe
   end
-  def display_follow_btn(user, the_partial)
+  def display_follow_btn(user, partial_file)
     return if current_user == user || current_user.follows.include?(user)
-
-    render partial: the_partial, locals: { obj: user }
+    render partial: partial_file, locals: { obj: user }
   end
 end

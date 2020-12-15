@@ -7,17 +7,17 @@
     class: "col-6 text-secondary text-uppercase | mx-auto   my-auto |  p-2 | font-weight-bold ", 
     style: "min-width: 200px;" %>
   </div>
-  <div class="follow-count-container row mx-4 border border-dark">
-    <div class="col-6 text-center p-3">
+  <div class="follow-count-container row mx-4 ">
+    <div class="col-6 text-center p-3 list-group-item">
       <h5 class="text-light">30</h5>
       <p class="text-light">Following</p>
     </div>
-    <div class="col-6 text-center border border-dark p-3">
+    <div class="col-6 text-center list-group-item p-3">
       <h5 class="text-light">2</h5>
       <p class="text-light">Followers</p>
     </div>
   </div>
-  <div class="list-group rounded-0 border-dark border-top">
+  <div class="list-group rounded-0">
     <%= link_to root_path, class: "text-light list-group-item list-group-item-action pl-5" do %>
       <ion-icon name="home"></ion-icon> Home
     <% end %>
