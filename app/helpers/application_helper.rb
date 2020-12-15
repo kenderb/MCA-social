@@ -23,8 +23,7 @@ module ApplicationHelper
         style: 'max-width:120px;'
     else
       image_tag user.photo.url(size), 
-      class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 
-        style: 'max-width:120px;'
+      class: "img-fluid  col-6 | mx-auto | pt-4 p-2 | my-auto "
     end
   end
 
