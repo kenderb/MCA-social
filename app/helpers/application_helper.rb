@@ -15,5 +15,18 @@ module ApplicationHelper
       render 'layouts/form_sessions'
     end
   end
-  
+
+  def display_photo_profile(size)
+    if current_user.photo.url == 'default_photo.png'
+      image_tag current_user.photo.url, 
+      class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 
+        style: 'max-width:120px;'
+    else
+      image_tag current_user.photo.url(size), 
+      class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 
+        style: 'max-width:120px;'
+    end
+  end
+
+
 end
