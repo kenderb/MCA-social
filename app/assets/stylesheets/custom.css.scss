@@ -2,24 +2,6 @@
 $my-bg-primary:  #51A2E1;
 $my-bg-darker:  #213246;
 $my-bg-ligth:  #F3F4F6;
-$scrollbarBG: #CFD8DC;
-$thumbBG: #90A4AE;
-
-body::-webkit-scrollbar {
-  width: 11px;
-}
-body {
-  
-  scrollbar-color: $thumbBG $scrollbarBG;
-}
-body::-webkit-scrollbar-track {
-  background: $scrollbarBG;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: $thumbBG ;
-  border-radius: 6px;
-  border: 3px solid $scrollbarBG;
-}
 
 .my-bg-primary {
   background-color: $my-bg-primary;
