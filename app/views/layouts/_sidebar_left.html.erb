@@ -1,8 +1,29 @@
-<aside class="left-navbar my-bg-darker container " >
-  <div class="aside-header row nav justify-content-end border-bottom border-dark p-3">
+<aside class="left-navbar my-bg-darker container px-0" >
+  <div class="aside-header row nav justify-content-end   p-3">
+  
     <%= display_photo_profile(current_user, :medium) %>
+  
     <%= link_to current_user.fullname, profile_path(current_user.username), 
     class: "col-6 text-secondary text-uppercase | mx-auto   my-auto |  p-2 | font-weight-bold ", 
     style: "min-width: 200px;" %>
   </div>
+  <div class="list-group rounded-0 border-dark border-top">
+ 
+  <%= link_to root_path, class: "text-light list-group-item list-group-item-action pl-5" do %>
+    <ion-icon name="home"></ion-icon> Home
+  <% end %>
+  <%= link_to "#", class: "text-light list-group-item list-group-item-action pl-5" do %>
+    <ion-icon name="at-outline"></ion-icon>  Connect
+  <% end %>
+  <%= link_to  root_path, class: "text-light list-group-item list-group-item-action pl-5" do%>
+  <ion-icon name="chatbox"></ion-icon>  Discover
+  <% end %>
+
+  <%= link_to  profile_path(current_user.username), class: "text-light list-group-item list-group-item-action pl-5" do %>
+  <ion-icon name="person"></ion-icon> Profile
+  <% end %>
+  <%= link_to logout_path, method: :delete, class: "text-light list-group-item list-group-item-action pl-5" do%>
+  <ion-icon name="log-out-outline"></ion-icon> Log out
+  <% end %>
+</div>
 </aside>

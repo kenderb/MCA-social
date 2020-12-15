@@ -17,6 +17,7 @@ module ApplicationHelper
   end
 
   def display_photo_profile(user, size)
+    
     if user.photo.url == 'default_photo.png'
       image_tag user.photo.url, 
       class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 

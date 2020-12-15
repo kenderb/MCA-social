@@ -13,7 +13,13 @@ $my-bg-ligth:  #F3F4F6;
 .my-bg-ligth {
   background-color: $my-bg-ligth;
 }
-
+.list-group-item {
+  margin:0;
+  padding:1rem;
+  width: 100%;
+  background-color: transparent;
+  
+}
 .main-app-container {
   height: 100vh;
   display: grid;
