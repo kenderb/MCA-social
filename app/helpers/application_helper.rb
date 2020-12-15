@@ -20,11 +20,12 @@ module ApplicationHelper
     
     if user.photo.url == 'default_photo.png'
       image_tag user.photo.url, 
-      class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 
+      class: "img-fluid | mx-auto |  p-3 | my-auto | rounded-3", 
         style: 'max-width:120px;'
     else
       image_tag user.photo.url(size), 
-      class: "img-fluid  col-6 | mx-auto | pt-4 p-2 | my-auto "
+      class: "img-fluid   | mx-auto | pt-4 p-3 | my-auto | rounded-3", 
+        style: 'max-width:130px;'
     end
   end
 
