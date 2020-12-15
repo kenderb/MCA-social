@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_attached_file :photo, styles: { medium: "250x250>", thumb: "50x50#" }, default_url: "default_photo.png"
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
-  has_attached_file :cover_image, styles: { medium: "800x300>" }, default_url: "default_cover.png"
+  has_attached_file :cover_image, styles: { medium: "923x300>" }, default_url: "default_cover.jpg"
   validates_attachment_content_type :cover_image, content_type: /\Aimage\/.*\z/
 
   validates_uniqueness_of :username, case_sensitive: false, message: 'Username already taken.'

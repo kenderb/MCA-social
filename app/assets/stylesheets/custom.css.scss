@@ -20,13 +20,18 @@ $my-bg-ligth:  #F3F4F6;
   background-color: transparent;
   
 }
+.cover-image-crop {
+  height: 300px;
+  object-fit: cover; 
+  object-position: 50% 70%;
+}
 .main-app-container {
   height: 100vh;
   display: grid;
   grid-template-areas: 
   "side-bar-l navbar navbar"
   "side-bar-l main side-bar-r";
-  grid-template-columns: 1.5fr 5fr 1.5fr;
+  grid-template-columns: 1fr 5fr 1.5fr;
   grid-template-rows: 5rem auto;
   
 

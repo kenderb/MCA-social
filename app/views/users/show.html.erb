@@ -1,1 +1,13 @@
-<h1>user <%= @user.fullname %> page</h1>
+<div class="card" style="width: 100%;">
+  <%= image_tag @user.cover_image.url(:medium), class: "cover-image-crop"%>
+  <div class="card-body">
+    <h5 class="card-title"><%= @user.fullname %></h5>
+    <p class="card-text">@<%= @user.username %></p>
+  </div>
+</div>
+<div class="card ">
+    <h5 class="card-title border-bottom p-3 text-primary"> You have <%= @user.opinions.length %> Movies opinions</h5>
+    <div class="card-body row ">
+      <%= render @opinions %>
+    </div>
+</div>
