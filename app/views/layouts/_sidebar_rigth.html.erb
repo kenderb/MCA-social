@@ -1,42 +1,44 @@
 
 <% if current_page?(root_path) %>
   <aside class="rigth-navbar  border border-top-0">
-    <h6 class="border-bottom pb-3">WHO TO FOLLOW</h6>
-      <% @not_following.each do |not_following| %>
-      <div class="d-flex flex-row align-items-center ">
-        <div>
-          <%= display_follow_btn(not_following, 'layouts/follow_icon') %>
-        </div>
-        <div >
-        <%= display_photo_profile(not_following, :medium)  %>
-        </div>
-        <div class="">
-          <h6>
-            <strong>
-              <%= link_to not_following.fullname, profile_path(not_following.username), class: "text-dark" %>
-            </strong>
-          </h6>
-          <small class="text-muted">
-            <%= display_follower_count(not_following) %>
-          </small>
-        </div>
-      </div>
-      <% end %>
+  <h6 class="border-bottom pb-3">
+      WHO TO FOLLOW
+  </h6>
+  <% @not_following.each do |not_following| %>
+  <div class="d-flex flex-row align-items-center ">
+    <div>
+      <%= display_follow_btn(not_following, 'layouts/follow_icon') %>
+    </div>
+    <div >
+      <%= display_photo_profile(not_following, :medium)  %>
+    </div>
+    <div class="">
+      <h6>
+        <strong>
+          <%= link_to not_following.fullname, profile_path(not_following.username), class: "text-dark" %>
+        </strong>
+      </h6>
+      <small class="text-muted">
+        <%= display_follower_count(not_following) %>
+      </small>
+    </div>
+  </div>
+  <% end %>
 
 
-      <div class="account-type">
-          <small class="text-muted">
-              <a href="#">Popular accounts</a> |
-              <a href="#">Find friends</a>
-          </small>
-      </div>
+  <div class="account-type">
+    <small class="text-muted">
+        <a href="#">Popular accounts</a> |
+        <a href="#">Find friends</a>
+    </small>
+  </div>
 
-      <h6 class="text-muted border-top border-bottom pt-3 pb-3 mt-3 mb-3">TRENDING</h6>
+  <h6 class="text-muted border-top border-bottom pt-3 pb-3 mt-3 mb-3">TRENDING</h6>
 
-      <p><a href="#" class="text-muted"> #remotework </a></p>
-      <p><a href="#" class="text-muted"> Education </a></p>
-      <p><a href="#" class="text-muted"> #blacklivesmatter </a></p>
-      <p><a href="#" class="text-muted"> Jacob Blake </a></p>
+  <p><a href="#" class="text-muted"> #remotework </a></p>
+  <p><a href="#" class="text-muted"> Education </a></p>
+  <p><a href="#" class="text-muted"> #blacklivesmatter </a></p>
+  <p><a href="#" class="text-muted"> Jacob Blake </a></p>
   </aside>
 <% else %>
   <%= render 'users/left_user_aisde' %>
