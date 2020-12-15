@@ -16,13 +16,13 @@ module ApplicationHelper
     end
   end
 
-  def display_photo_profile(size)
-    if current_user.photo.url == 'default_photo.png'
-      image_tag current_user.photo.url, 
+  def display_photo_profile(user, size)
+    if user.photo.url == 'default_photo.png'
+      image_tag user.photo.url, 
       class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 
         style: 'max-width:120px;'
     else
-      image_tag current_user.photo.url(size), 
+      image_tag user.photo.url(size), 
       class: "img-fluid  col-6 | mx-auto |  p-2 | my-auto ", 
         style: 'max-width:120px;'
     end

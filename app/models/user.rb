@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_attached_file :photo, styles: { medium: "250x250>", thumb: "60x60#" }, default_url: "default_photo.png"
+  has_attached_file :photo, styles: { medium: "250x250>", thumb: "50x50#" }, default_url: "default_photo.png"
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
   has_attached_file :cover_image, styles: { medium: "800x300>" }, default_url: "default_cover.png"
