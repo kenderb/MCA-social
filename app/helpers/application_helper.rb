@@ -1,10 +1,10 @@
 module ApplicationHelper
   def show_photo(user, extra_class = '')
     if user.photo.present?
-      image_tag(user.photo.to_s, alt: user.username, class: "pr-2 rounded-circle profile-img #{extra_class}")
+      image_tag(user.photo.to_s, alt: user.username, class: "pr-2  profile-img #{extra_class}")
     else
       image_tag('default_photo',
-                alt: user.username, class: 'pr-2 rounded-circle profile-img')
+                alt: user.username, class: 'pr-2  profile-img')
     end
   end
 
@@ -17,14 +17,13 @@ module ApplicationHelper
   end
 
   def display_photo_profile(user, size)
-    
     if user.photo.url == 'default_photo.png'
       image_tag user.photo.url, 
-      class: "img-fluid | mx-auto |  p-3 | my-auto | rounded-3 ", 
+      class: "img-fluid | mx-auto |  p-3 | my-auto ", 
         style: 'max-width:120px;'
     else
       image_tag user.photo.url(size), 
-      class: "img-fluid   | mx-auto | pt-4 p-3 | my-auto | rounded-3", 
+      class: "img-fluid   | mx-auto | pt-4 p-3 | my-auto ", 
         style: 'max-width:130px;'
     end
   end
