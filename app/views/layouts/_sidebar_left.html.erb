@@ -9,11 +9,11 @@
   </div>
   <div class="follow-count-container row mx-4 ">
     <div class="col-6 text-center p-3 list-group-item">
-      <h5 class="text-light">30</h5>
+      <h5 class="text-light"><%= current_user.followings.length %></h5>
       <p class="text-light">Following</p>
     </div>
     <div class="col-6 text-center list-group-item p-3">
-      <h5 class="text-light">2</h5>
+      <h5 class="text-light"><%= current_user.followers.length %></h5>
       <p class="text-light">Followers</p>
     </div>
   </div>

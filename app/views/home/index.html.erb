@@ -1,5 +1,6 @@
 <div class="card mb-3 ">
     <div class="card-body h5">
+    <%= "Hello" if current_page?(profile_path(current_user)) %>
     <h5 class='text-muted'>Your Opinions for the movies</h5>
         <%= form_for(@opinion, url: opinion_path) do |f| %>
             <%= f.text_field :text, autofocus: true, class: "form-control", placeholder: "Enter your opinion" %>
