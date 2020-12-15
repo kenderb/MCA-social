@@ -7,23 +7,32 @@
     class: "col-6 text-secondary text-uppercase | mx-auto   my-auto |  p-2 | font-weight-bold ", 
     style: "min-width: 200px;" %>
   </div>
+  <div class="follow-count-container row mx-4 border border-dark">
+    <div class="col-6 text-center p-3">
+      <h5 class="text-light">30</h5>
+      <p class="text-light">Following</p>
+    </div>
+    <div class="col-6 text-center border border-dark p-3">
+      <h5 class="text-light">2</h5>
+      <p class="text-light">Followers</p>
+    </div>
+  </div>
   <div class="list-group rounded-0 border-dark border-top">
- 
-  <%= link_to root_path, class: "text-light list-group-item list-group-item-action pl-5" do %>
-    <ion-icon name="home"></ion-icon> Home
-  <% end %>
-  <%= link_to "#", class: "text-light list-group-item list-group-item-action pl-5" do %>
-    <ion-icon name="at-outline"></ion-icon>  Connect
-  <% end %>
-  <%= link_to  root_path, class: "text-light list-group-item list-group-item-action pl-5" do%>
-  <ion-icon name="chatbox"></ion-icon>  Discover
-  <% end %>
+    <%= link_to root_path, class: "text-light list-group-item list-group-item-action pl-5" do %>
+      <ion-icon name="home"></ion-icon> Home
+    <% end %>
+    <%= link_to "#", class: "text-light list-group-item list-group-item-action pl-5" do %>
+      <ion-icon name="at-outline"></ion-icon>  Connect
+    <% end %>
+    <%= link_to  root_path, class: "text-light list-group-item list-group-item-action pl-5" do%>
+    <ion-icon name="chatbox"></ion-icon>  Discover
+    <% end %>
 
-  <%= link_to  profile_path(current_user.username), class: "text-light list-group-item list-group-item-action pl-5" do %>
-  <ion-icon name="person"></ion-icon> Profile
-  <% end %>
-  <%= link_to logout_path, method: :delete, class: "text-light list-group-item list-group-item-action pl-5" do%>
-  <ion-icon name="log-out-outline"></ion-icon> Log out
-  <% end %>
-</div>
+    <%= link_to  profile_path(current_user.username), class: "text-light list-group-item list-group-item-action pl-5" do %>
+    <ion-icon name="person"></ion-icon> Profile
+    <% end %>
+    <%= link_to logout_path, method: :delete, class: "text-light list-group-item list-group-item-action pl-5" do%>
+    <ion-icon name="log-out-outline"></ion-icon> Log out
+    <% end %>
+  </div>
 </aside>
