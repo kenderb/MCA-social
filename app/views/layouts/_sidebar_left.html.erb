@@ -19,20 +19,20 @@
   </div>
   <div class="list-group rounded-0">
     <%= link_to root_path, class: "text-light list-group-item list-group-item-action pl-5" do %>
-      <ion-icon name="home"></ion-icon> Home
+      <ion-icon name="home" class="mr-2"></ion-icon> Home
     <% end %>
     <%= link_to "#", class: "text-light list-group-item list-group-item-action pl-5" do %>
-      <ion-icon name="at-outline"></ion-icon>  Connect
+      <ion-icon name="at-outline"class="mr-2"></ion-icon>  Connect
     <% end %>
     <%= link_to  root_path, class: "text-light list-group-item list-group-item-action pl-5" do%>
-    <ion-icon name="chatbox"></ion-icon>  Discover
+    <ion-icon name="chatbox"class="mr-2"></ion-icon>  Discover
     <% end %>
 
     <%= link_to  profile_path(current_user.username), class: "text-light list-group-item list-group-item-action pl-5" do %>
-    <ion-icon name="person"></ion-icon> Profile
+    <ion-icon name="person"class="mr-2"></ion-icon> Profile
     <% end %>
     <%= link_to logout_path, method: :delete, class: "text-light list-group-item list-group-item-action pl-5" do%>
-    <ion-icon name="log-out-outline"></ion-icon> Log out
+    <ion-icon name="log-out-outline"class="mr-2"></ion-icon> Log out
     <% end %>
   </div>
 </aside>

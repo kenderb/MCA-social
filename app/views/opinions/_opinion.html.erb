@@ -12,10 +12,10 @@
       </div>
         <p class="card-text"><%= opinion.text %></p>
         <div class="card-text text-muted d-flex justify-content-end" style="font-size: 20px;">
-          <small class="text-muted"> 
+          <%= like_or_dislike_btn(opinion) %>
+          <small class="text-muted ml-2"> 
             <%= opinion.likes.length %> 
           </small>
-          <%= like_or_dislike_btn(opinion) %>
         </div>
     </div>
   </div>
