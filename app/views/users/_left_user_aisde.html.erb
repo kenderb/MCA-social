@@ -1,3 +1,21 @@
-<div>
-  <%= @user.username %>
+<div class="mt-3">
+  <div class="d-flex justify-content-center m-4">
+    <div class="my-auto mr-3">
+      <% if display_follow_btn(@user, 'layouts/follow_icon').nil? %>
+        <ion-icon name="checkmark-circle-outline" style="font-size: 50px;" class="text-muted"></ion-icon>
+      <% else %>
+        <%= display_follow_btn(@user, 'layouts/follow_icon') %>
+      <% end %>
+    </div>
+    <div>
+      <%= display_photo_profile_users_page(@user, :medium) %>
+    </div>
+    <div class="my-auto text-muted ml-3">
+      <ion-icon name="list-circle-outline" style="font-size: 50px;"></ion-icon>
+    </div>
+  </div>
+  <div class="text-center" style="line-height: 1;">
+    <h5><strong><%= @user.fullname %></strong> </h5>
+    <p class="text-muted">@<%= @user.username %></p>
+  </div>
 </div>

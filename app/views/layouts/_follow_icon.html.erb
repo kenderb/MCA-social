@@ -1,3 +1,9 @@
-<%= link_to follow_path(user_id: obj.id), class: 'follow_me', method: :post do %>
-<ion-icon name="add-circle-outline" class="h1"></ion-icon>
+<%= link_to follow_path(user_id: obj.id), method: :post do %>
+  
+  <% if current_page?(root_path) %>
+  <ion-icon name="add-circle-outline" class="h1"></ion-icon>
+    
+  <% else %>
+    <ion-icon name="add-circle-outline" style="font-size: 50px;"></ion-icon>
+  <% end %>
 <% end %>

@@ -19,11 +19,23 @@ module ApplicationHelper
   def display_photo_profile(user, size)
     if user.photo.url == 'default_photo.png'
       image_tag user.photo.url, 
-      class: "  user-photo-border"
+      class: "user-photo-border"
         
     else
       image_tag user.photo.url(size), 
-      class: "   user-photo-border" 
+      class: "user-photo-border" 
+        
+    end
+  end
+
+  def display_photo_profile_users_page(user, size)
+    if user.photo.url == 'default_photo.png'
+      image_tag user.photo.url, 
+      class: "user-photo-border-big"
+        
+    else
+      image_tag user.photo.url(size), 
+      class: "user-photo-border-big" 
         
     end
   end

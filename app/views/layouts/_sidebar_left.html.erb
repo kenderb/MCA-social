@@ -1,7 +1,7 @@
 <aside class="left-navbar my-bg-darker container px-0" >
   <div class="d-flex flex-row align-items-center m-auto p-3">
   
-    <%= display_photo_profile(current_user, :medium) %>
+    <%= display_photo_profile(current_user, :thumb) %>
   
     <%= link_to current_user.fullname, profile_path(current_user.username), 
     class: "col-6 text-secondary text-uppercase | mx-auto   my-auto |  p-2 | font-weight-bold ", 
