@@ -25,6 +25,10 @@ $my-bg-ligth:  #F3F4F6;
   object-fit: cover; 
   object-position: 50% 70%;
 }
+
+.user-photo-border {
+   border-radius: 2rem;
+}
 .main-app-container {
   height: 100vh;
   display: grid;
