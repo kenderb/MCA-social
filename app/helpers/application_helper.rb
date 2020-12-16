@@ -40,5 +40,23 @@ module ApplicationHelper
     end
   end
 
+  def follow_icon
+    if current_page?(root_path)
+      '<ion-icon name="add-circle-outline" class="h1"></ion-icon>'.html_safe
+    else
+      '<ion-icon name="add-circle-outline" style="font-size: 50px;"></ion-icon>'.html_safe
+    end
+  end
+
+  def show_sidebar
+    if current_page?(root_path)
+      render 'layouts/aside_index'
+    else
+      render 'users/left_user_aisde'
+    end
+  end
+  
+  
+
 
 end
