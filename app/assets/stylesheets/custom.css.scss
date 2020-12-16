@@ -20,6 +20,9 @@ $my-bg-ligth:  #F3F4F6;
   background-color: transparent;
   
 }
+.tex-darker {
+  color:rgba($my-bg-darker,0.6) ;
+}
 .cover-image-crop {
   height: 300px;
   object-fit: cover; 
@@ -54,6 +57,9 @@ $my-bg-ligth:  #F3F4F6;
   
   .middle-content {
     grid-area: main;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     
   }
   
