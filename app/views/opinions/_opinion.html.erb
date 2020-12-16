@@ -1,22 +1,20 @@
-<div class="card m-1 mx-auto" style="width: 26rem;">
-  <div class="row">
-    <div class="col-md-2 ">
-      <%= display_photo_profile(opinion.author, :thumb) %>
-    </div>
-    <div class="col-md-10">
-      <div class="card-body">
+<div class="border-top mx-auto p-3" style="width: 100%;">
+  <div class="d-flex flex-row  justify-content-around">
+    <%= display_photo_profile(opinion.author, :medium) %>
+    <div class="w-75 pr-5">
+      <div class="d-flex flex-row  justify-content-between mt-3">
         <h5 class="card-title"><%= link_to opinion.author.fullname, profile_path(opinion.author.username), 
               class: "text-dark" 
         %></h5>
-        <p class="card-text"><%= opinion.text %></p>
         <p class="card-text"><small class="text-muted"><%= opinion.created_at.to_formatted_s(:short) %> </small></p>
+      </div>
+        <p class="card-text"><%= opinion.text %></p>
         <div class="card-text text-muted d-flex justify-content-end" style="font-size: 20px;">
-        <small class="text-muted"> 
-          <%= opinion.likes.length %> 
-        </small>
-        <%= like_or_dislike_btn(opinion) %>
-      </div>
-      </div>
+          <small class="text-muted"> 
+            <%= opinion.likes.length %> 
+          </small>
+          <%= like_or_dislike_btn(opinion) %>
+        </div>
     </div>
   </div>
 </div>
