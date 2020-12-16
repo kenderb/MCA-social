@@ -18,7 +18,7 @@
     <h5><strong><%= @user.fullname %></strong> </h5>
     <p class="text-muted">@<%= @user.username %></p>
   </div>
-  <div class="row border-top border-bottom">
+  <div class="row border-top border-bottom w-100">
     <div class="col-4 text-center p-3 border-right">
       <h5 ><%= @user.opinions.length %></h5>
       <p >Opinions</p>
@@ -31,5 +31,30 @@
       <h5 ><%= @user.followers.length %></h5>
       <p >Followers</p>
     </div>
+  </div>
+  <div>
+    <h5 class="text-uppercase text-muted p-4">Followed by</h5>
+  </div>
+  <div class="border-top w-100">
+    <% @user.followers.each do |follower| %>
+      <div class="d-flex flex-row align-items-center m-auto p-3 shadow rounded">
+        <div>
+          <%= display_follow_btn(follower, 'layouts/follow_icon') %>
+        </div>
+        <div >
+          <%= display_photo_profile(follower, :medium)  %>
+        </div>
+        <div>
+          <h6>
+            <strong>
+              <%= link_to follower.fullname, profile_path(follower.username), class: "text-dark" %>
+            </strong>
+          </h6>
+          <small class="text-muted">
+            <%= display_follower_count(follower) %>
+          </small>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
