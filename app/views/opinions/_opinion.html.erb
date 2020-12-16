@@ -1,7 +1,9 @@
 <div class="border-top mx-auto p-3" style="width: 100%;">
-  <div class="d-flex flex-row  justify-content-around">
+  <div class="d-flex flex-row  justify-content-center ">
+  <div class="rounded ">
     <%= display_photo_profile(opinion.author, :medium) %>
-    <div class="w-75 pr-5">
+  </div>
+    <div class="w-100 shadow p-3 px-5 bg-white rounded">
       <div class="d-flex flex-row  justify-content-between mt-3">
         <h5 class="card-title"><%= link_to opinion.author.fullname, profile_path(opinion.author.username), 
               class: "text-dark" 
