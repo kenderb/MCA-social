@@ -7,14 +7,14 @@
     </h6>
   </div>
   <% @not_following.each do |not_following| %>
-  <div class="d-flex flex-row align-items-center m-auto p-3">
+  <div class="d-flex flex-row align-items-center m-auto p-3 shadow rounded">
     <div>
       <%= display_follow_btn(not_following, 'layouts/follow_icon') %>
     </div>
     <div >
       <%= display_photo_profile(not_following, :medium)  %>
     </div>
-    <div class="">
+    <div>
       <h6>
         <strong>
           <%= link_to not_following.fullname, profile_path(not_following.username), class: "text-dark" %>
@@ -26,8 +26,6 @@
     </div>
   </div>
   <% end %>
-
-
   <div class="container p-3">
     <small class="text-muted">
         <a href="#">Popular accounts</a> |
