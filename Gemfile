@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'hirb', '~> 0.7.3'
   gem 'capybara', '~> 3.34'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
