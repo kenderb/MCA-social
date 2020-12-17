@@ -1,6 +1,8 @@
-# Social media app with Ruby on Rails
+# Twitter redesign Ruby on Rails Capstone project.
 
 > I base this Project on the Twitter web app. This project is a capstone project for Ruby on Rails framework. I learned a lot while I was doing the app; It was challenging at the beginning, but I overcome all the difficulties and I created a full stack application.
+> 
+> Gregoire Vella created the original design, you can see it [here](https://glacial-cove-94894.herokuapp.com/)
 
 ## Diagram for the App
 
