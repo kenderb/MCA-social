@@ -9,5 +9,4 @@ class Opinion < ApplicationRecord
   def self.count_opinion
     ordered_by_most_recent.length
   end
-  
 end

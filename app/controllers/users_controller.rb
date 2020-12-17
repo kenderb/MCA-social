@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: %i[new create ]
+  before_action :require_user, except: %i[new create]
   before_action :find_current_user, only: %i[edit update]
 
-  
   def new
     @user = User.new
   end
@@ -28,12 +27,9 @@ class UsersController < ApplicationController
     @opinions = @user.opinions.ordered_by_most_recent
   end
 
-  def edit
-    
-  end
+  def edit; end
 
   def update
-   
     @user.update(user_params)
     flash[:notice] = 'User profile updated!'
     redirect_to @user
@@ -48,5 +44,4 @@ class UsersController < ApplicationController
   def find_current_user
     @user = current_user
   end
-
 end
