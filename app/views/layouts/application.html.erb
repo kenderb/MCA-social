@@ -11,6 +11,14 @@
   </head>
 
   <body class="main-app-container my-bg-ligth">
-      <%= validate_session %>
+    <div class="position-absolute left-0">
+      <% flash.each do |key, value|%>
+        <div class="alert alert-info" role="alert">
+          <button type="button" class="close ml-2" data-dismiss="alert">&times;</button>
+          <%=value%>
+        </div>
+      <% end %>
+    </div>
+    <%= validate_session %>
   </body>
 </html>

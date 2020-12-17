@@ -42,6 +42,10 @@ $my-bg-ligth:  #F3F4F6;
   border-radius: 5rem;
   object-fit: cover; 
 }
+
+.info-position {
+  position: absolute;
+}
 .main-app-container {
   height: 100vh;
   display: grid;

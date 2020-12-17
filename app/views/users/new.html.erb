@@ -1,38 +1,45 @@
-<h1>create a user</h1>
-<% @user.errors.messages.values.each do |message| %>
-  <%  message.each do |m| %>
-  <div class="alert alert-danger alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <%= m %>
-  </div>
+<div class="middle-content mx-auto mt-1 p-4 card text-center shadow " style="height: 55rem; width: 30rem;">
+  <%= image_tag('logo.svg', alt: 'Description', class: 'w-25 h-25 mx-auto ')%>
+  <h1>Create an account</h1>
+  <div>
+  <% @user.errors.messages.values.each do |message| %>
+    <%  message.each do |m| %>
+    <div class="alert alert-danger alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= m %>
+    </div>
+    <% end %>
   <% end %>
-<% end %>
-
-<%= form_for(@user, html: {multipart: true}) do |f| %>
-  <div class="form-group">
-    <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class: "form-control"  %>
   </div>
+  <%= form_for(@user, html: {multipart: true}) do |f| %>
+    <div class="border p-3 rounded mb-3">
 
-<div class="form-group">
-    <%= f.text_field :fullname, placeholder: "Enter Fullname", class: "form-control"  %>
+      <div class="form-group">
+        <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class: "form-control"  %>
+      </div>
+      <div class="form-group">
+          <%= f.text_field :fullname, placeholder: "Enter Fullname", class: "form-control"  %>
+      </div>
+    </div>
+
+    <div class="form-group border p-3 font-weight-bold rounded">
+      <%= f.label :photo, "Add your photo here" %>
+      <hr>
+      <%= f.file_field :photo, class: "form-control-file", id:"customFile" %>
+    </div>
+
+    <div class="form-group border p-3 font-weight-bold rounded">
+      <%= f.label :cover_image, "Add your cover image here" %>
+      <hr>
+      <%= f.file_field :cover_image, class: "form-control-file", id:"customFile" %>
+      
+    </div>
+
+    <div class="actions">
+      <%= f.submit class: "btn btn-primary w-75" %>
+      <%= link_to 'Sign in', login_path, class: "btn my-bg-darker w-75 mt-2 text-light "%>
+    </div>
+  <% end %>
 </div>
-
-<h5 class="border-bottom pb-2">Optional</h5>
-
-  <div class="form-group">
-    <%= f.label :photo, "Attach your profile photo" %>
-    <%= f.file_field :photo, class: "form-control"  %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :cover_image, "Attach your cover image" %>
-    <%= f.file_field :cover_image, class: "form-control"  %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit class: "btn btn-primary" %>
-    <small>Already have an account?</small> <%= link_to 'Sign in', login_path %>
-  </div>
-<% end %>
 
 
