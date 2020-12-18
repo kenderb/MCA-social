@@ -10,8 +10,8 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   </head>
 
-  <body class="main-app-container my-bg-ligth">
-    <div class="position-absolute left-0">
+  <body >
+    <div class="alert-container">
       <% flash.each do |key, value|%>
         <div class="alert alert-info" role="alert">
           <button type="button" class="close ml-2" data-dismiss="alert">&times;</button>
@@ -19,6 +19,9 @@
         </div>
       <% end %>
     </div>
+    <div class="main-app-container my-bg-ligth">
+    
     <%= validate_session %>
+    </div>
   </body>
 </html>

@@ -51,6 +51,17 @@ $my-bg-ligth:  #f3f4f6;
   position: absolute;
 }
 
+.alert-container {
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 35%;
+  right: 35%;
+  text-align: center;
+  z-index:4;
+}
+
 .main-app-container {
   height: 100vh;
   display: grid;
