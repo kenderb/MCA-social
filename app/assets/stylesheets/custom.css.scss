@@ -62,14 +62,19 @@ $my-bg-ligth:  #f3f4f6;
   z-index:4;
 }
 
+.signup-form {
+  max-width: 20rem;
+  height:30rem;
+}
+
 .main-app-container {
   height: 100vh;
   display: grid;
   grid-template-areas:
-    "side-bar-l navbar navbar"
-    "side-bar-l main side-bar-r";
-  grid-template-columns: 1fr 5fr 1.5fr;
-  grid-template-rows: 5rem auto;
+    "navbar navbar"
+    "side-bar-l"
+    "main side-bar-r";
+  grid-template-columns: 1f;
 
   .top-navbar {
     grid-area: navbar;
@@ -93,4 +98,19 @@ $my-bg-ligth:  #f3f4f6;
   .left-navbar {
     grid-area: side-bar-l;
   }
+}
+
+
+@media screen and (min-width: 768px) {
+    .main-app-container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "side-bar-l navbar navbar"
+      "side-bar-l main side-bar-r";
+    grid-template-columns: 1fr 5fr 1.5fr;
+    grid-template-rows: 5rem auto;
+
+  }
+  
 }
