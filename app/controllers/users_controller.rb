@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_user, except: %i[new create]
-  #before_action :find_current_user, only: %i[edit update]
+  before_action :find_current_user, only: %i[edit update]
 
   def new
     @user = User.new
@@ -28,11 +28,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    
   end
 
   def update
-    @user = current_user
+    
     @user.update(user_params)
 
     flash.notice = 'Your profile has been updated!'
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :fullname, :photo, :cover_image)
   end
 
-  # def find_current_user
-  #   @user = current_user
-  # end
+  def find_current_user
+    @user = current_user
+  end
 end
