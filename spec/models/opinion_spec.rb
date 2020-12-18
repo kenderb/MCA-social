@@ -10,8 +10,8 @@ RSpec.describe Opinion, type: :model do
     it { should validate_length_of(:text) }
   end
 
-  describe "count_opinion" do
-    it "show numbers of opinions" do
+  describe 'count_opinion' do
+    it 'show numbers of opinions' do
       user1 = User.new(id: 1, username: 'userone', fullname: 'user one name')
       user1.save
       opinion1 = Opinion.new(author_id: user1.id, movie_name: 'IT', text: 'Some opinion for the IT movie')

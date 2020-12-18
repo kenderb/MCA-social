@@ -27,12 +27,9 @@ class UsersController < ApplicationController
     @opinions = @user.opinions.ordered_by_most_recent
   end
 
-  def edit
-    
-  end
+  def edit; end
 
   def update
-    
     @user.update(user_params)
 
     flash.notice = 'Your profile has been updated!'
