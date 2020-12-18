@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_user, except: %i[new create]
-  before_action :find_current_user, only: %i[edit update]
+  #before_action :find_current_user, only: %i[edit update]
 
   def new
     @user = User.new
@@ -27,12 +27,18 @@ class UsersController < ApplicationController
     @opinions = @user.opinions.ordered_by_most_recent
   end
 
-  def edit; end
+  def edit
+    @user = User.find(params[:id])
+  end
 
   def update
-    @user.update(user_params)
-    flash[:notice] = 'User profile updated!'
-    redirect_to @user
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "Your account information was successfully updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
   private
@@ -41,7 +47,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :fullname, :photo, :cover_image)
   end
 
-  def find_current_user
-    @user = current_user
-  end
+  # def find_current_user
+  #   @user = current_user
+  # end
 end

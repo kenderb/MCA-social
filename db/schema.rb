@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_154705) do
     t.datetime "cover_image_updated_at"
     t.string "photo"
     t.string "cover_image"
+    t.index ["username"], name: "index_users_on_username"
   end
 
   add_foreign_key "likes", "users"
