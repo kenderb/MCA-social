@@ -2,15 +2,13 @@
     <div class="card-body h5">
     <%= "Hello" if current_page?(profile_path(current_user)) %>
     <h5 class='text-muted text-center mb-3'>Your Opinions for the movies</h5>
-    <div>
-      <%= render 'shared/errors', obj: @user %>
-      </div>
-        <%= form_with(model: @opinion,  local: true) do |f| %>
-          <%= f.text_field :movie_name, autofocus: true, class: "form-control mb-3 mx-auto w-50", placeholder: "Enter the movie name" %>
-          <%= f.text_field :text, class: "form-control mb-3", placeholder: "Enter your opinion" %>
-          <%= f.submit class: "btn btn-primary  w-25 " %>
-        <% end %>
-      </div>
+    <%= render 'shared/errors', obj: @opinion %>
+    <%= form_with(model: @opinion,  local: true) do |f| %>
+      <%= f.text_field :movie_name, autofocus: true, class: "form-control mb-3 mx-auto w-50", placeholder: "Enter the movie name" %>
+      <%= f.text_field :text, class: "form-control mb-3", placeholder: "Enter your opinion" %>
+      <%= f.submit class: "btn btn-primary  w-25 " %>
+    <% end %>
+    </div>
 </div>
 
 <div class="card ">
