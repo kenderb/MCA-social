@@ -1,0 +1,30 @@
+<%= form_for(@user, html: {multipart: true}) do |f| %>
+    <div class="border p-2 rounded mb-3">
+
+      <div class="form-group">
+      <%= f.label :username, "Username" %>
+        <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class: "form-control"  %>
+      </div>
+      <div class="form-group">
+      <%= f.label :fullname, "Fullname" %>
+          <%= f.text_field :fullname, placeholder: "Enter Fullname", class: "form-control"  %>
+      </div>
+    </div>
+
+    <div class="form-group border p-2 font-weight-bold rounded">
+      <%= f.label :photo, "Add your photo here" %>
+      <hr>
+      <%= f.file_field :photo, class: "form-control-file", id:"customFile" %>
+    </div>
+
+    <div class="form-group border p-2 font-weight-bold rounded">
+      <%= f.label :cover_image, "Add your cover image here" %>
+      <hr>
+      <%= f.file_field :cover_image, class: "form-control-file", id:"customFile" %>
+      
+    </div>
+
+    <div class="actions ">
+      <%= f.submit class: "btn btn-primary w-75" %>
+    </div>
+  <% end %>

@@ -28,17 +28,16 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
-      flash[:notice] = "Your account information was successfully updated"
-      redirect_to @user
-    else
-      render 'edit'
-    end
+    @user = current_user
+    @user.update(user_params)
+
+    flash.notice = 'Your profile has been updated!'
+
+    redirect_to profile_path(@user.username)
   end
 
   private
