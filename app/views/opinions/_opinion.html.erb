@@ -10,6 +10,7 @@
         %></h5>
         <p class="card-text"><small class="text-muted"><%= opinion.created_at.to_formatted_s(:short) %> </small></p>
       </div>
+        <p class="card-text">Movie name: <strong><%= opinion.movie_name %></strong></p>
         <p class="card-text"><%= opinion.text %></p>
         <div class="card-text text-muted d-flex justify-content-end" style="font-size: 20px;">
           <%= like_or_dislike_btn(opinion) %>

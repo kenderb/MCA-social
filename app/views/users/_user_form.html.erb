@@ -1,6 +1,16 @@
+
+<div>
+  <% @user.errors.messages.values.each do |message| %>
+    <%  message.each do |m| %>
+    <div class="alert alert-danger alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= m %>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
 <%= form_for(@user, html: {multipart: true}) do |f| %>
     <div class="border p-2 rounded mb-3">
-
       <div class="form-group">
       <%= f.label :username, "Username" %>
         <%= f.text_field :username, autofocus: true, placeholder: "Enter a username", class: "form-control"  %>
