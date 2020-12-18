@@ -42,9 +42,9 @@ module ApplicationHelper
 
   def follow_icon
     if current_page?(root_path)
-      '<ion-icon name="add-circle-outline" class="h1"></ion-icon>'.html_safe
+      '<ion-icon name="add-circle-outline" class="h1">addCricle</ion-icon>'.html_safe
     else
-      '<ion-icon name="add-circle-outline" style="font-size: 50px;"></ion-icon>'.html_safe
+      '<ion-icon name="add-circle-outline" style="font-size: 50px;">addCricle</ion-icon>'.html_safe
     end
   end
 

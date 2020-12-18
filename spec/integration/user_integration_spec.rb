@@ -3,7 +3,7 @@ require 'spec_helper'
 
 RSpec.describe User, type: :feature do
   scenario 'register successfully' do
-    visit new_users_path
+    visit new_user_path
     fill_in 'Username', with: 'Juanito'
     fill_in 'Fullname', with: 'Juanito Bailador'
     click_on 'Create User'
@@ -11,7 +11,7 @@ RSpec.describe User, type: :feature do
   end
 
   scenario 'Sign in successfully' do
-    visit new_users_path
+    visit new_user_path
     fill_in 'Username', with: 'Juanito'
     fill_in 'Fullname', with: 'Juanito Bailador'
     click_on 'Create User'

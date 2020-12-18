@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'spec_helper'
 
-RSpec.describe Opinion, type: :feature do
+RSpec.describe Like, type: :feature do
 
   scenario 'likes successfully' do
     visit new_user_path
