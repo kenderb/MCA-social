@@ -7,7 +7,7 @@ class OpinionsController < ApplicationController
       flash[:notice] = 'Your opinion has been posted'
       redirect_back(fallback_location: root_path)
     else
-      flash[:alert] = 'Something went wrong'
+      flash[:alert] = 'movie name minmun of 2 maximun of 30 characters. Movie opinion minimum: 4, maximum: 120.'
       redirect_to root_path
     end
   end
