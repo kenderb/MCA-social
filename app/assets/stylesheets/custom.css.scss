@@ -64,7 +64,7 @@ $my-bg-ligth:  #f3f4f6;
 
 .signup-form {
   max-width: 20rem;
-  height:30rem;
+  height:32rem;
 }
 
 .main-app-container {
@@ -73,8 +73,11 @@ $my-bg-ligth:  #f3f4f6;
   grid-template-areas:
     "navbar navbar"
     "side-bar-l"
-    "main side-bar-r";
+    "main "
+    "side-bar-r"
+    ;
   grid-template-columns: 1f;
+  
 
   .top-navbar {
     grid-area: navbar;
