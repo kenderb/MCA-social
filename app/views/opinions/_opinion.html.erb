@@ -1,0 +1,24 @@
+<div class="border-top mx-auto p-3" style="width: 100%;">
+  <div class="d-flex flex-row  justify-content-center ">
+  <div>
+    <%= display_photo_profile(opinion.author, :thumb) %>
+  </div>
+    <div class="w-100 shadow p-3 px-5 bg-white rounded">
+      <div class="d-flex flex-row  justify-content-between mt-3">
+        <h5 class="card-title"><%= link_to opinion.author.fullname, profile_path(opinion.author.username), 
+              class: "text-dark" 
+        %></h5>
+        <p class="card-text"><small class="text-muted"><%= opinion.created_at.to_formatted_s(:short) %> </small></p>
+      </div>
+        <p class="card-text">Movie name: <strong><%= opinion.movie_name %></strong></p>
+        <p class="card-text"><%= opinion.text %></p>
+        <div class="card-text text-muted d-flex justify-content-end" style="font-size: 20px;">
+          <%= like_or_dislike_btn(opinion) %>
+          <small class="text-muted ml-2"> 
+            <%= opinion.likes.length %> 
+          </small>
+        </div>
+    </div>
+  </div>
+</div>
+

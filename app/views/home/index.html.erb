@@ -1,0 +1,19 @@
+<div class="card mb-3 w-50 mx-auto">
+    <div class="card-body h5">
+    <%= "Hello" if current_page?(profile_path(current_user)) %>
+    <h5 class='text-muted text-center mb-3'>Your Opinions for the movies</h5>
+    <%= form_with(model: @opinion,  local: true) do |f| %>
+      <%= render 'shared/errors', obj: @opinion %>
+      <%= f.text_field :movie_name, autofocus: true, class: "form-control mb-3 mx-auto w-50", placeholder: "Enter the movie name" %>
+      <%= f.text_field :text, class: "form-control mb-3", placeholder: "Enter your opinion" %>
+      <%= f.submit class: "btn btn-primary  w-25 " %>
+    <% end %>
+    </div>
+</div>
+
+<div class="card ">
+    <h5 class="card-title border-bottom p-3 text-primary"> <%= @opinions.count_opinion %> Movies opinions</h5>
+    <div class="card-body row ">
+      <%= render @opinions %>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+@import 'bootstrap/dist/css/bootstrap';
+$my-bg-primary:  #51a2e1;
+$my-bg-darker:  #213246;
+$my-bg-ligth:  #f3f4f6;
+
+.my-bg-primary {
+  background-color: $my-bg-primary;
+}
+
+.my-bg-darker {
+  background-color: $my-bg-darker;
+}
+
+.my-bg-ligth {
+  background-color: $my-bg-ligth;
+}
+
+.list-group-item {
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.tex-darker {
+  color: rgba($my-bg-darker, 0.6);
+}
+
+.cover-image-crop {
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+
+.user-photo-border {
+  margin: 1rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.user-photo-border-big {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5rem;
+  object-fit: cover;
+}
+
+.info-position {
+  position: absolute;
+}
+
+.alert-container {
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 35%;
+  right: 35%;
+  text-align: center;
+  z-index: 4;
+}
+
+.login-form {
+  max-width: 20rem;
+  height: 32rem;
+}
+
+.signup-form {
+  height: 100%;
+  max-width: 25rem;
+}
+
+.main-app-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "side-bar-l"
+    "main "
+    "side-bar-r";
+  grid-template-columns: 1fr;
+
+  .top-navbar {
+    grid-area: navbar;
+  }
+
+  .rigth-navbar {
+    grid-area: side-bar-r;
+  }
+
+  .middle-content {
+    grid-area: main;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .left-navbar {
+    grid-area: side-bar-l;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .signup-form {
+    height: 100%;
+    width: 30rem;
+  }
+
+  .main-app-container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "side-bar-l navbar navbar"
+      "side-bar-l main side-bar-r";
+    grid-template-columns: 1fr 5fr 1.5fr;
+    grid-template-rows: 5rem auto;
+  }
+}
