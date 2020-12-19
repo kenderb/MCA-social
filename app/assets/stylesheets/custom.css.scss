@@ -62,9 +62,14 @@ $my-bg-ligth:  #f3f4f6;
   z-index:4;
 }
 
-.signup-form {
+.login-form {
   max-width: 20rem;
   height:32rem;
+}
+
+.signup-form {
+  height: 100%; 
+  max-width: 25rem;
 }
 
 .main-app-container {
@@ -105,6 +110,10 @@ $my-bg-ligth:  #f3f4f6;
 
 
 @media screen and (min-width: 768px) {
+    .signup-form {
+      height: 100%; 
+      width: 30rem;
+     }
     .main-app-container {
     height: 100vh;
     display: grid;
