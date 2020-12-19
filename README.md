@@ -25,7 +25,7 @@
 
 ## Live Demo
 
-[Live version](https://glacial-cove-94894.herokuapp.com/)
+[Live version](https://lit-waters-17418.herokuapp.com/)
 
 ## Prerequisites
 
