@@ -21,6 +21,7 @@ RSpec.describe Opinion, type: :feature do
     fill_in 'Enter the movie name', with: ''
     fill_in 'Enter your opinion', with: 'Some opinion for the movie'
     click_on 'Create Opinion'
-    expect(page).to have_content('movie name minmun of 2 maximun of 30 characters. Movie opinion minimum: 4, maximum: 120.')
+    expect(page)
+      .to have_content('movie name minmun of 2 maximun of 30 characters. Movie opinion minimum: 4, maximum: 120.')
   end
 end
