@@ -81,7 +81,7 @@ Give a ⭐️ if you like this project!
 - [Rails Guides](https://guides.rubyonrails.org/)
 - [Shoulda Matchers](https://matchers.shoulda.io/docs/v4.4.1/index.html)
 - Stack Overflow
-- Odin Project.
+- Odin project.
 
 ## 📝 License
 
