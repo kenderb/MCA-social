@@ -1,6 +1,6 @@
 # Twitter redesign Ruby on Rails Capstone project.
 
-> I base this Project on the Twitter web app. This project is a capstone project for Ruby on Rails framework. I learned a lot while I was doing the app; It was challenging at the beginning, but I overcome all the difficulties and I created a full stack application.
+> I base this project on the Twitter web app. This project is a capstone project for Ruby on Rails framework. I learned a lot while I was doing the app; It was challenging at the beginning, but I overcome all the difficulties and I created a full stack application.
 >This app works as a social media where you can share your opinions about movies.
 >Users can create an account with the username and logging using the username.
 >You can share your opinions and see the opinions of other people.
